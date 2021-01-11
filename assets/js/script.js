@@ -89,15 +89,17 @@ $(".list-group").on("click", "p", function() {
   var text = $(this)
     .text()
     .trim();
+
   // creates new <textarea> element
   var textInput = $("<textarea>")
     .addClass("form-control")
     .val(text);
+
   // swaps out <p> with <textarea> just created
   $(this).replaceWith(textInput);
-  // highlights text box 
+  
+
   textInput.trigger("focus");
-  console.log(text);
 });
 
 $(".list-group").on("blur", "textarea", function() {
@@ -179,9 +181,7 @@ $(".list-group").on("click", "span", function() {
 
   // replace input with span element
   $(this).replaceWith(taskSpan);
-
 });
-
 
 // remove all tasks
 $("#remove-tasks").on("click", function() {
